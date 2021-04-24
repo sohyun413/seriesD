@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+
+      html, body{
+          height: 100%;
+          margin : 0;
+      }
+
+    .container {
+        border: 1px solid #000;
+        height: 100%;
+        display: flex;
+        flex-direction: column; /*어떤방향으로 정렬?*/
+        justify-content: center; /*나머지 축 기준*/
+        align-items: center; /*display, flex-direction, justify-content, align-items는 한몸처럼 움직임*/
+    }
+    .items {
+      width: 100px;
+      height: 100px;
+      background-color: #787878;
+      margin: 1px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="items"></div>
+<!--  <div class="items"></div>-->
+<!--  <div class="items"></div>-->
+<!--  <div class="items"></div>-->
+</div>
+</body>
+</html>
