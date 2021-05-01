@@ -15,9 +15,14 @@ soup = BeautifulSoup(response.text, 'html.parser')
 selector = '#old_content > table > tbody > tr'
 title_selector = 'td.title > div > a'
 titles = soup.select(selector)
+rank = 0
 
 for title in titles:
     title_tag = title.select_one(title_selector)
 
     if title_tag:
-        print(title_tag.text)
+        rank = title.select_one('td:nth-child(1) > img')
+        point = title.select_one('td.point').text
+        title_name = title_tag.text
+        print(rank['alt'], title_name, point)
+
